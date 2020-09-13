@@ -1,0 +1,28 @@
+body {
+ background-color: azure;
+}
+
+h1 {
+ background-color: yellow;
+  font-family: fantasy;
+  text-align: center;
+}
+
+h3 {
+ color: brown;
+  font-size: 1.4em;
+  background-color: aliceblue;
+  font-family: sans-serif;
+}
+
+li {
+ text-decoration: underline;
+  font-family: monospace;
+}
+
+p {
+  font-family: monospace;
+}
+iframe {
+ border-radius: 6px;
+}
