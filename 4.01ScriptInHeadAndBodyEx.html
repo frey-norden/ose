@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Script in Head and Body</title>
+    <script>document.write("A");</script>
+</head>
+<body>
+  <h1>Hello</h1>
+  <script>document.write("B");</script>
+    <p>See the source code.</p>
+</body>
+</html>
+
+<!-- Explain:
+1) What is shown on the page and in which order?
+  First, the letter A is printed, then Hello , then B,
+  then the text in the <p> tag - "See the source code."
+2) How does the location of the JavaScript code affect to the result?
+  The position in the file that the JS code affects the output, because
+  the browser executes the code in the order that it is written, line by line.
+-->

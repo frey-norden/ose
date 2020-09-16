@@ -12,8 +12,8 @@ def text_prompt(msg):
     return input(msg)
 
 
-name = text_prompt('Please enter your name:')
-height = float(text_prompt('Please enter your height in meters (e.g. 1.8)'))
-weight = float(text_prompt('Please enter your weight in kilograms'))
+name = text_prompt('Please enter your name: ')
+height = float(text_prompt('Please enter your height in meters (e.g. 1.8) '))
+weight = float(text_prompt('Please enter your weight in kilograms '))
 bodyMassIndex = math.ceil(weight / (height * height))
 print(''.join([str(x) for x in ['Hi,', name, '! Your body mass index is ', bodyMassIndex]]))

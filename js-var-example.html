@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Example JS Variables 2</title>
+  </head>
+  <body>
+    <h1>Kilo allowance</h1>
+    <form>
+      <label>Weight in kilos:</label>
+
+      <!-- Textbox -->
+      <input type="text" id="txtKilos" size="3">
+
+      <!-- Button -->
+      <input type="button" value="Calculate kilo allowance"
+              onClick="calculateAllowance()">
+    </form>
+
+    <!-- Paragraph element for writing output -->
+    <p id="pOutput"></p>
+
+    <script type="text/javascript">
+        function calculateAllowance() {
+          // Step 1: Get an input value from the textbox
+          var kilograms =
+              Number(document.getElementById("txtKilos").value);
+
+          // Step 2: Perform the calculation
+          var allowance = kilograms * 0.33;
+
+          // Step 3: Display the result
+          document.getElementById('pOutput').innerHTML =
+              'The baggage allowance is ' + allowance.toFixed(2) + ' kilos.';
+        }
+
+    </script>
+
+
+  </body>
+</html>

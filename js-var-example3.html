@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Example JS vars 3</title>
+  </head>
+  <body>
+    <h1>Sale Price</h1>
+    <form>
+      <p>
+        <label>List price: </label>
+        <input type="text" id="txtListPrice" size="6">
+      </p>
+      <p>
+        <label>Discount (%): </label>
+        <input type="text" id="txtDiscountPercentage" size="3">
+      </p>
+      <p>
+        <input type="button" value="Calculate the sale price"
+                onClick="calculateSalePrice()">
+      </p>
+    </form>
+      <p id="pOutput"></p>
+
+      <script type="text/javascript">
+          function calculateSalePrice() {
+              // Step 1  get input from form box
+              var listPrice =
+                  Number(document.getElementById("txtListPrice").value);
+              var discountPercentage =
+                  Number(document.getElementById("txtDiscountPercentage").value);
+
+              // Step 2   calculate discount price
+              var discount = listPrice * discountPercentage / 100;
+              var salePrice = listPrice - discount;
+
+              // Step 3   display in browser for user
+              document.getElementById("pOutput").innerHTML =
+                    "Sale price is " + salePrice.toFixed(2) + " €"
+          }
+      </script>
+
+  </body>
+</html>
