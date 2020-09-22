@@ -6,7 +6,7 @@ function checkAge() {
     if (age < 18) {
       // assign text "Adolescents are not allowed to play." to a variable
       var status = "Adolescents are not allowed to play.";
-    } else if (age >= 18) {
+    } else {
       // otherwise
       var status = "Old enough to play.";
 			// assign text "Old enough to play." to a variable
