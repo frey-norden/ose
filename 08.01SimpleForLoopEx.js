@@ -3,7 +3,7 @@ function runForLoop() {
   var i;
   for (i = 0; i < 31; i++) {
     divOut.innerHTML = i + "<br>";
-    //console.log(i);
+    console.log(i);
   }
 
 }
