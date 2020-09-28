@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+label {
+	display: block;
+	width: 13em;
+	float: left;
+}
+</style>
+<title>Votes of Party</title>
+
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<script src="08.06VotesofPartyEx.js">
+</script>
+</head>
+<body>
+	<h3>Votes of Party</h3>
+
+	<form>
+		<p>
+			<label>Total votes by the whole party: </label> <input type="text" name="votes"
+				id="votes" size="5">
+		</p>
+		<p>
+			<label>Number of candidates in the party: </label> <input type="text" name="candidates"
+				id="candidates" size="3">
+		</p>
+		<p>
+			<input type="button" value="Show the comparison scores" id="submit"
+ 				onClick="showComparisonScores()">
+		</p>
+	</form>
+
+		<!-- This is the target where the JavaScript will write the answer -->
+	<div id="answer"></div>
+</body>
+</html>
+
+<!-- test example:
+votes = 10000, candidates = 5 -> 1. candidate: 10000
+	2. candidate: 5000
+	3. candidate: 3333
+	4. candidate: 2500
+	5. candidate: 2000
+
+-->
