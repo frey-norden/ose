@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Array demo</title>
+    <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+    <article>
+        <h2>Task Cost Scenarios</h2>
+
+        <h3>Basics of JS "arrays"</h3>
+        <p>(BTW. JS "array" is more like a list than an array)</p>
+
+        <div class="class1">
+            <h3>Agenda item:</h3>
+            <p id="output">output will be here...</p>
+            <button onclick="randomizeDay();">Randomize another day</button>
+        </div>
+
+        <h3>Add more costs</h3>
+        Name:<input type="text" id="txtName" /><br />
+        Cost:<input type="number" id="numbCost" /><br />
+        <button onclick="addCost();">Add the cost</button>
+    </article>
+
+    <footer>
+        <p>&copy; BS copyright, 2020<br />
+            <a href="https://validator.w3.org/check?uri=referer">
+                <img style="border:none;height:31px;width:31px;text-decoration:none;"
+                    src="http://myy.haaga-helia.fi/~valju/ValidatorLogos/html_logo_grayscale_31.png"
+                    alt="Valid HTML"  /></a>
+
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:none;width:88px;height:31px;text-decoration:none;"
+                     src="http://myy.haaga-helia.fi/~valju/ValidatorLogos/css_logo_grayscale_31.png"
+                     alt="Valid CSS" /></a>
+
+            <a href="https://jslint.com/">
+                <img style="border:0;width:105px;height:31px;text-decoration:none;"
+                    src="http://myy.haaga-helia.fi/~valju/ValidatorLogos/jslint_logo_grayscale_31.png"
+                    alt="jslint - JS Quality Test Tool" /></a>
+        </p>
+    </footer>
+
+    <!-- JavaScript run after the body items have been added to the DOM -->
+    <script src="arrayEx.js"></script>
+</body>
+</html>

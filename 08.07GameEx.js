@@ -33,5 +33,4 @@ function calculateProfit() {
     output.innerHTML +=
         'Profit was ' + profit.toFixed(2) + ' euros' + '<br>'
 
-
 }
