@@ -3,5 +3,9 @@ var array = ["Milk", "Bread", "Juice", "Eggs", "Butter", "Salt", "Oranges", "App
 function sortArray() {
     array.sort();
     array.reverse();
-    console.log(array);
+    
+    for (var i = 0; i < array.length; i++) {
+      console.log(array[i]);
+    }
+
 }
