@@ -13,12 +13,12 @@ function comparePackages() {
     if (specialPkg < allInclusive) {
       // assign text "The Special package (XX.XX) is cheaper than the All-inclusive package (29.90)"
 			// to a variable
-      var outputMsg = "The Special package (" + specialPkg.toFixed(2) + ") is cheaper than the All-inclusive package (29.90)"
+      var outputMsg = "The Special package (" + specialPkg.toFixed(2) + ") is cheaper than the All-inclusive package (29.90)";
     } else {
       // otherwise
         // assign text "The All-inclusive package (29.90) is cheaper than the Special package (XX.XX)"
         // to a variable
-      var outputMsg = "The All-inclusive package (29.90) is cheaper than the Special package (" + specialPkg.toFixed(2) + ")"
+      var outputMsg = "The All-inclusive package (29.90) is cheaper than the Special package (" + specialPkg.toFixed(2) + ")";
     }
 
 		// write answer to the DOM, in answer div, as content

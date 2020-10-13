@@ -5,7 +5,7 @@ function calculateUnitFine() {
 
 		    // Calculate the unit fine and assign the result into another variable
           var unitFine =
-              (monthlyIncome - 255)/60
+              (monthlyIncome - 255)/60;
           var kiitos = "Kiitos, thank you for shopping @ Poliisi!"
         // Write the answer to the web page DOM, in the answer div, as the content
           document.getElementById("answerDiv").innerHTML =

@@ -14,7 +14,7 @@ function calculateCosts() {
         Number(document.getElementById("participants").value);
 
     // Do them cal-cuh-lay-shuns
-    var calculatedCosts = ((consumption/100.0)*fuelPrice*kilometers/participants)
+    var calculatedCosts = ((consumption/100.0)*fuelPrice*kilometers/participants);
 
     // Display it to tha DOM, baby !!!
     document.getElementById("answerId").innerHTML =
