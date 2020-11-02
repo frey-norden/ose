@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Repair Work</title>
+<style type="text/css">
+label {
+	display: block;
+	width: 5em;
+	float: left;
+}
+</style>
+
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+<script src="07.10PriceOfWorkEx.js"></script>
+</head>
+<body>
+	<h3>Repair Work</h3>
+
+	<form>
+		<p>
+			<label>Work Title: </label> <input type="text" name="title" id="title"
+				size="25" onblur="modifyTitle()"> <!-- onfocus: Chrome/supported, Firefox/not supported -->
+		</p>
+		<p>
+			<label>Date: </label> <input type="text" name="date" id="date"
+				size="8">
+		</p>
+		<p>
+			<label>Start Time: </label> <input type="text" name="startTime" id="startTime"
+				size="5">
+		</p>
+		<p>
+			<label>End Time: </label> <input type="text" name="endTime"
+				id="endTime" size="5">
+		</p>
+		<p>
+			<label>Description: </label>
+			<textarea name="description" id="description" rows="4" cols="40"></textarea>
+		</p>
+		<p>
+			<button type="button" class="btn btn-outline-primary" onClick="calculate()">
+					Show Quote
+					<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-clipboard-data" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path>
+						<path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path>
+						<path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"></path>
+					</svg>
+			</button>
+		</p>
+	</form>
+
+	<!-- This is the target where the JavaScript will write the answer -->
+	<div id="answer"></div>
+</body>
+</html>
+
+
+<!-- test example:
+title = installation, date = 04.04.2015, start time = 12:08, end time =13:55  -> Length of the work was 107 minutes.
+	The hourly price is 48.00 euros during the workdays.
+	The price of this repair work is 85.60 euros.
+
+title = installation, date = 05.04.2015, start time = 12:08, end time =13:55  -> Length of the work was 107 minutes.
+	The hourly price is 72.00 euros during the Sundays.
+	The price of this repair work is 128.40 euros.
+-->
