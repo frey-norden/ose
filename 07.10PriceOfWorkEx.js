@@ -46,9 +46,10 @@ function calculate() {
     var eT = eTHours + eTMins;
     // actual calculation
     var totalTime = eT - sT;
-    
 
 
+    var dateInput = document.getElementById('date').value;
+    var checkDay = isSunday(dateInput);
     // If it is not Sunday  (Call isSunday() function)
         //Calculate and show price of the repair work during the workdays
     //otherwise
@@ -70,9 +71,12 @@ function isSunday(dateText) {
 
 	// Split the given date text into day, month and year parts using the substr() method
 
+  var day = dateText.substr(0, 2);
+  var mon = dateText.substr(3, 2);
+  var yr = dateText.substr(6, 4);
 
 	// Create a new Date object to a variable asDate
-
+  var workDate = new Date();
 
 	// Get the day of the week with its getDay() method. Sunday is number 0 .
 
