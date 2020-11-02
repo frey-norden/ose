@@ -59,14 +59,15 @@ function calculate() {
 
     if (issunday == true) {
        var rate = 72; // labor rate for Sundays
-
+       var day = 'Sundays';
     } else {
       var rate = 48;  // labor rate for all other days
+      var day = 'workdays';
     }
     totalPrice *= rate;
 
     var outputMsg1 = 'Length of the work was ' + totalTime + ' minutes.<br>'
-    var outputMsg2 = 'The hourly price is during the workdays ' + rate.toFixed(2) +' euros.<br>'
+    var outputMsg2 = 'The hourly price is during the ' + day + ' ' + rate.toFixed(2) +' euros.<br>'
     var outputMsg3 = 'The price of this repair work is ' + totalPrice.toFixed(2) + ' euros.'
     document.getElementById('answer').innerHTML = outputMsg1 + outputMsg2 + outputMsg3;
 }
