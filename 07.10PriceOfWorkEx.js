@@ -1,11 +1,14 @@
 function modifyTitle() {
-
+    // function assumes a lowercase title and
+    // runs modifyTitle() and allCapsTitleTrimmed() when onfocusout from input field
     // Read value of title from the input field
     var title = document.getElementById('title').value;
-    //console.log(title);
+
     // Call allCapsTitleTrimmed() function
     var modified = allCapsTitleTrimmed(title);
-    return modified;
+    var modTitle = document.getElementById('title');
+    modTitle.value = modified;
+
 }
 
 function allCapsTitleTrimmed(text) {
@@ -13,30 +16,35 @@ function allCapsTitleTrimmed(text) {
   var strip = text.trim();
 	// Changes the text given to it to be ALL CAPS
   var big = strip.toUpperCase();
-  console.log(big);
-  document.getElementById('title').innerHTML  = big;
 	// Return the changed text
-  return document.getElementById('title').innerHTML  = big;
+  return  big;
 }
 
 
 function calculate() {
 
     // Calculate length of the work as minutes.
+    // take values from input fields
     var startTime = document.getElementById('startTime').value;
     var endTime = document.getElementById('endTime').value;
+
+    // extract hours and mins portions of input
+    // then convert to int for calculations
+
+    // startTime field
     var sTHours = startTime.substr(0, 2);
     sTHours = parseInt(sTHours) * 60;
     var sTMins = startTime.substr(3, 5);
     sTMins = parseInt(sTMins);
     sTMins += sTHours;
-
+    // endTime field
     var eTHours = endTime.substr(0, 2);
     eTHours = parseInt(eTHours) * 60;
     var eTMins = endTime.substr(3, 5);
     eTMins = parseInt(eTMins);
     eTMins += eTHours;
 
+    // actual calculation
     var totalTime = eTMins - sTMins;
 
     console.log('Total time in mins ' + totalTime);
