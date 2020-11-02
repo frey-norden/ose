@@ -39,14 +39,22 @@ function calculate() {
 
     var totalTime = eTMins - sTMins;
 
-    console.log('Total time in mins' + totalTime);
+    console.log('Total time in mins ' + totalTime);
 
-  
+
     // If it is not Sunday  (Call isSunday() function)
         //Calculate and show price of the repair work during the workdays
     //otherwise
         //Calculate and showprice of the repair work on Sundays
 
+
+    var totalPrice = (totalTime / 60) * 48;
+
+
+    var outputMsg1 = 'Length of the work was ' + totalTime + ' minutes.<br>'
+    var outputMsg2 = 'The hourly price is during the workdays 48.00 euros.<br>'
+    var outputMsg3 = 'The price of this repair work is ' + totalPrice.toFixed(2) + ' euros.'
+    document.getElementById('answer').innerHTML = outputMsg1 + outputMsg2 + outputMsg3;
 }
 
  // The function gets the date text in the format "dd.MM.yyyy".
