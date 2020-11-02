@@ -1,6 +1,6 @@
 function modifyTitle() {
     // function assumes a lowercase title and
-    // runs modifyTitle() and allCapsTitleTrimmed() when onfocusout from input field
+    // runs modifyTitle() and allCapsTitleTrimmed() when onfocusout event from input field
     // Read value of title from the input field
     var title = document.getElementById('title').value;
 
@@ -36,18 +36,17 @@ function calculate() {
     sTHours = parseInt(sTHours) * 60;
     var sTMins = startTime.substr(3, 5);
     sTMins = parseInt(sTMins);
-    sTMins += sTHours;
+    var sT = sTHours + sTMins;
+
     // endTime field
     var eTHours = endTime.substr(0, 2);
     eTHours = parseInt(eTHours) * 60;
     var eTMins = endTime.substr(3, 5);
     eTMins = parseInt(eTMins);
-    eTMins += eTHours;
-
+    var eT = eTHours + eTMins;
     // actual calculation
-    var totalTime = eTMins - sTMins;
-
-    console.log('Total time in mins ' + totalTime);
+    var totalTime = eT - sT;
+    
 
 
     // If it is not Sunday  (Call isSunday() function)
