@@ -73,7 +73,7 @@ function calculate() {
 }
 
  // The function gets the date text in the format "dd.MM.yyyy".
- // The function returns Boolean value true if the date is for a Sunday, otherwise false.
+ // The function returns Boolean value true if the date is a Sunday, otherwise false.
 function isSunday(dateText) {
 
 	// Split the given date text into day, month and year parts using the substr() method
