@@ -7,10 +7,10 @@
 function Department(deptno, deptname) {
     this.number = deptno;
     this.name = deptname;
-    
-    // INSERT YOUR CODE HERE
-    
-    
+
+    this.toString = function() {
+        return this.number + ' ' + this.name;
+    }
 }
 
 var outputText = "";
@@ -22,9 +22,9 @@ departmentArray.push(new Department(30, "Product development"));
 
 
 for(var i = 0; i < departmentArray.length; i++) {
-    outputText += departmentArray[i].toString() + "<br />";
+    outputText += departmentArray[i].toString() + "<br>";
 }
 
 document.getElementById("pOutput").innerHTML = outputText;
 
-// End
+// Fin
